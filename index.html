@@ -4,299 +4,382 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adam Akka — Senior Manager, Program Management</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%231c1c1c'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='24' fill='%23c8a86b' font-weight='700'%3EAA%3C/text%3E%3C/svg%3E">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='24' fill='%23e2c47a' font-weight='400'%3EAA%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 
-:root {
-  --bg:        #161614;
-  --bg-card:   #1e1e1b;
-  --bg-subtle: #232320;
+:root{
+  --bg:        #0a0a0a;
+  --bg2:       #111111;
+  --bg3:       #171717;
+  --bg4:       #1c1c1c;
   --border:    rgba(255,255,255,0.07);
-  --gold:      #c8a86b;
-  --gold2:     #dfc08a;
-  --text:      #dedad2;
-  --muted:     #7a7870;
-  --white:     #f0ede6;
+  --border2:   rgba(255,255,255,0.12);
+  --gold:      #e2c47a;
+  --gold2:     #f0d898;
+  --gold3:     rgba(226,196,122,0.15);
+  --text:      #e8e5de;
+  --muted:     #555550;
+  --muted2:    #888880;
+  --white:     #f5f2eb;
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-weight:300;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:2px}
 
 /* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  height: 60px;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 7vw;
-  background: rgba(22,22,20,0.94);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border);
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:56px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 6vw;
+  background:rgba(10,10,10,0.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
 }
-.nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem; letter-spacing: 0.12em;
-  color: var(--gold); text-decoration: none;
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;letter-spacing:0.1em;
+  color:var(--gold);font-style:italic;
+  text-decoration:none;
 }
-.nav-links { display: flex; gap: 2.2rem; }
-.nav-links a {
-  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--muted); text-decoration: none; transition: color .2s;
+.nav-links{display:flex;gap:2rem}
+.nav-links a{
+  font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color .2s;
 }
-.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{
+  font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--gold);border:1px solid rgba(226,196,122,0.3);
+  padding:0.35rem 1rem;text-decoration:none;transition:all .2s;
+}
+.nav-cta:hover{background:var(--gold3);border-color:var(--gold)}
 
 /* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-top: 60px;
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 42%;
+  padding-top:56px;
 }
-.hero-left {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 80px 7vw 80px 7vw;
-  border-right: 1px solid var(--border);
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 6vw 80px;
+  border-right:1px solid var(--border);
+  position:relative;
 }
-.hero-right {
-  position: relative; overflow: hidden;
+.hero-left::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse at 0% 60%, rgba(226,196,122,0.04) 0%, transparent 60%);
+  pointer-events:none;
 }
-.hero-right img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center top;
-  display: block;
-  filter: brightness(0.85) contrast(1.02);
+.hero-right{
+  position:relative;overflow:hidden;
 }
-.hero-eyebrow {
-  font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 1.4rem;
+.hero-right img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  display:block;
+  filter:brightness(0.8) contrast(1.05) saturate(0.9);
 }
-.hero-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3.2rem, 5.5vw, 5.8rem);
-  font-weight: 300; line-height: 1.0;
-  color: var(--white); margin-bottom: 0.15em;
+.hero-right::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to right, rgba(10,10,10,0.3) 0%, transparent 30%);
+  pointer-events:none;
 }
-.hero-name em { font-style: italic; color: var(--gold2); }
-.hero-subtitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1rem, 1.6vw, 1.35rem);
-  font-weight: 300; font-style: italic;
-  color: var(--muted); margin-bottom: 2.2rem;
-}
-.hero-bio {
-  font-size: 0.9rem; color: #a09e96; line-height: 1.85;
-  max-width: 480px; margin-bottom: 2.8rem;
-  border-left: 2px solid var(--gold);
-  padding-left: 1.2rem;
-}
-.hero-stats {
-  display: grid; grid-template-columns: repeat(4, auto);
-  gap: 0; margin-bottom: 2.8rem;
-  border: 1px solid var(--border); border-radius: 2px;
-  overflow: hidden; width: fit-content;
-}
-.stat {
-  padding: 1rem 1.5rem;
-  border-right: 1px solid var(--border);
-  text-align: center;
-}
-.stat:last-child { border-right: none; }
-.stat-n {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.9rem; color: var(--gold); line-height: 1; display: block;
-}
-.stat-l {
-  font-size: 0.65rem; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--muted);
-}
-.hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; }
-.btn {
-  display: inline-flex; align-items: center;
-  padding: 0.7rem 1.6rem; border-radius: 1px;
-  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
-  text-decoration: none; transition: all .22s; font-weight: 400;
-}
-.btn-fill { background: var(--gold); color: #161614; }
-.btn-fill:hover { background: var(--gold2); }
-.btn-ghost { border: 1px solid var(--border); color: var(--muted); }
-.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
 
-/* ── SHARED SECTION SHELL ── */
-.section { padding: 96px 7vw; border-bottom: 1px solid var(--border); }
-.section-inner { max-width: 1080px; margin: 0 auto; }
-.s-eyebrow {
-  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 0.6rem;
+.eyebrow{
+  font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.2rem;
+  display:flex;align-items:center;gap:0.75rem;
 }
-.s-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.9rem, 3.2vw, 3rem);
-  font-weight: 300; color: var(--white);
-  margin-bottom: 3rem; line-height: 1.1;
+.eyebrow::before{
+  content:'';display:inline-block;
+  width:24px;height:1px;background:var(--gold);
 }
-.s-title em { font-style: italic; color: var(--gold2); }
+
+.hero-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.5rem,6vw,6.5rem);
+  font-weight:300;line-height:0.95;
+  color:var(--white);margin-bottom:0.2em;
+  letter-spacing:-0.01em;
+}
+.hero-name em{font-style:italic;color:var(--gold2)}
+
+.hero-subtitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1rem,1.6vw,1.3rem);
+  font-weight:300;font-style:italic;
+  color:var(--muted2);margin-bottom:2rem;
+}
+
+.hero-bio{
+  font-size:0.9rem;color:#7a7870;line-height:1.85;
+  max-width:500px;margin-bottom:2.5rem;
+  position:relative;padding-left:1.25rem;
+}
+.hero-bio::before{
+  content:'';position:absolute;left:0;top:4px;bottom:4px;
+  width:2px;background:var(--gold);
+}
+
+.stats-row{
+  display:grid;grid-template-columns:repeat(4,auto);
+  width:fit-content;
+  border:1px solid var(--border);
+  margin-bottom:2.5rem;
+}
+.stat{
+  padding:0.9rem 1.4rem;
+  border-right:1px solid var(--border);
+  text-align:center;
+}
+.stat:last-child{border-right:none}
+.stat-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;color:var(--gold);
+  line-height:1;display:block;font-weight:300;
+}
+.stat-l{
+  font-size:0.6rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--muted);
+}
+
+.ctas{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  padding:0.65rem 1.5rem;
+  font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;
+  text-decoration:none;transition:all .22s;font-weight:400;
+}
+.btn-fill{background:var(--gold);color:#0a0a0a;font-weight:500}
+.btn-fill:hover{background:var(--gold2)}
+.btn-ghost{border:1px solid var(--border2);color:var(--muted2)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── SECTION SHELL ── */
+.sec{padding:88px 6vw;border-bottom:1px solid var(--border)}
+.sec-inner{max-width:1080px;margin:0 auto}
+
+.sec-head{margin-bottom:3rem}
+.sec-eyebrow{
+  font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.5rem;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.sec-eyebrow::before{
+  content:'';display:inline-block;width:16px;height:1px;background:var(--gold);
+}
+.sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.5vw,3.2rem);
+  font-weight:300;color:var(--white);
+  line-height:1.1;
+}
+.sec-title em{font-style:italic;color:var(--gold2)}
 
 /* ── EXPERIENCE ── */
-.exp-item {
-  display: grid; grid-template-columns: 200px 1fr;
-  gap: 0 3rem; padding: 2.5rem 0;
-  border-top: 1px solid var(--border);
+.exp-list{}
+.exp-item{
+  display:grid;grid-template-columns:180px 1fr;
+  gap:0 2.5rem;
+  padding:2.5rem 0;
+  border-top:1px solid var(--border);
 }
-.exp-meta { padding-top: 3px; }
-.exp-period {
-  font-size: 0.72rem; letter-spacing: 0.08em;
-  color: var(--gold); margin-bottom: 0.3rem;
+.exp-item:first-child{border-top:none;padding-top:0}
+.exp-meta{padding-top:3px}
+.exp-period{
+  font-size:0.7rem;letter-spacing:0.08em;
+  color:var(--gold);margin-bottom:0.35rem;display:block;
 }
-.exp-co {
-  font-size: 0.8rem; color: var(--muted); line-height: 1.5;
+.exp-co{
+  font-size:0.78rem;color:var(--muted);line-height:1.55;
 }
-.exp-role {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem; font-weight: 400;
-  color: var(--white); margin-bottom: 0.5rem; line-height: 1.2;
+.exp-co strong{color:var(--muted2);font-weight:400}
+.exp-role{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;font-weight:400;
+  color:var(--white);margin-bottom:0.6rem;line-height:1.2;
 }
-.exp-body {
-  font-size: 0.88rem; color: #a09e96; line-height: 1.8;
-}
-.exp-body ul { padding-left: 1.1rem; }
-.exp-body li { margin-bottom: 0.35rem; }
-.exp-body a { color: var(--gold2); text-decoration: none; }
-.exp-body a:hover { text-decoration: underline; }
+.exp-body{font-size:0.87rem;color:#6a6860;line-height:1.85}
+.exp-body p{margin-bottom:0.5rem}
+.exp-body ul{padding-left:1rem}
+.exp-body li{margin-bottom:0.35rem}
+.exp-body strong{color:var(--muted2);font-weight:400}
+.exp-body a{color:var(--gold);text-decoration:none}
+.exp-body a:hover{text-decoration:underline}
 
 /* ── SKILLS ── */
-.skills-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
+.skills-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
 }
-.skill-cell {
-  background: var(--bg-card); padding: 1.75rem;
+.skill-cell{
+  background:var(--bg2);
+  padding:1.75rem;
+  transition:background .2s;
 }
-.skill-cell-title {
-  font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 1rem;
+.skill-cell:hover{background:var(--bg3)}
+.skill-cell-label{
+  font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;
 }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.tag {
-  background: var(--bg-subtle); border: 1px solid var(--border);
-  color: #b8b4ac; font-size: 0.76rem;
-  padding: 0.28rem 0.7rem; border-radius: 1px;
+.tags{display:flex;flex-wrap:wrap;gap:0.4rem}
+.tag{
+  background:var(--bg3);border:1px solid var(--border);
+  color:#666660;font-size:0.75rem;
+  padding:0.25rem 0.65rem;
 }
 
 /* ── CERTS ── */
-.certs-list { display: flex; flex-direction: column; gap: 0; }
-.cert-row {
-  display: flex; justify-content: space-between; align-items: baseline;
-  gap: 1.5rem; padding: 0.9rem 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.88rem;
+.certs-wrap{}
+.cert-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:1rem;padding:0.85rem 0;
+  border-bottom:1px solid var(--border);
+  font-size:0.87rem;
 }
-.cert-row:first-child { border-top: 1px solid var(--border); }
-.cert-name { color: var(--text); }
-.cert-right { display: flex; gap: 1.5rem; align-items: baseline; flex-shrink: 0; }
-.cert-org { color: var(--muted); font-size: 0.78rem; }
-.cert-date { color: var(--gold); font-size: 0.75rem; letter-spacing: 0.06em; white-space: nowrap; }
+.cert-row:first-child{border-top:1px solid var(--border)}
+.cert-name{color:var(--text)}
+.cert-right{display:flex;gap:1.5rem;flex-shrink:0;align-items:baseline}
+.cert-org{color:var(--muted);font-size:0.76rem}
+.cert-date{color:var(--gold);font-size:0.72rem;letter-spacing:0.06em;white-space:nowrap}
 
 /* ── EDUCATION ── */
-.edu-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
+.edu-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
 }
-.edu-cell {
-  background: var(--bg-card); padding: 2rem 1.75rem;
+.edu-cell{
+  background:var(--bg2);padding:2rem 1.75rem;
+  transition:background .2s;
 }
-.edu-degree {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem; color: var(--white);
-  margin-bottom: 0.4rem; line-height: 1.3;
+.edu-cell:hover{background:var(--bg3)}
+.edu-degree{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;color:var(--white);
+  margin-bottom:0.4rem;line-height:1.3;font-weight:400;
 }
-.edu-school {
-  font-size: 0.78rem; color: var(--gold);
-  letter-spacing: 0.06em; margin-bottom: 0.4rem;
+.edu-school{
+  font-size:0.75rem;color:var(--gold);
+  letter-spacing:0.06em;margin-bottom:0.4rem;
 }
-.edu-focus { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
-.edu-gpa {
-  display: inline-block; margin-top: 0.75rem;
-  font-size: 0.78rem; color: var(--gold2);
-  border-bottom: 1px solid var(--gold); padding-bottom: 1px;
+.edu-focus{font-size:0.78rem;color:var(--muted);line-height:1.5}
+.edu-gpa{
+  display:inline-block;margin-top:0.75rem;
+  font-size:0.76rem;color:var(--gold2);
+  border-bottom:1px solid var(--gold);padding-bottom:1px;
 }
 
 /* ── LANGUAGES & AWARDS ── */
-.lang-awards-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+.two-panel{display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.lang-list{}
+.lang-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0.8rem 0;border-bottom:1px solid var(--border);
+  font-size:0.9rem;
 }
-.lang-list { display: flex; flex-direction: column; gap: 0; }
-.lang-row {
-  display: flex; justify-content: space-between;
-  padding: 0.85rem 0; border-bottom: 1px solid var(--border);
-  font-size: 0.9rem;
+.lang-row:first-child{border-top:1px solid var(--border)}
+.lang-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;color:var(--white);font-weight:300;
 }
-.lang-row:first-child { border-top: 1px solid var(--border); }
-.lang-name { color: var(--white); }
-.lang-level { color: var(--muted); font-size: 0.8rem; }
-.lang-learn { color: var(--gold); font-size: 0.8rem; font-style: italic; }
+.lang-level{color:var(--muted);font-size:0.78rem}
+.lang-learn{color:var(--gold);font-size:0.78rem;font-style:italic}
+
+.award-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;color:var(--gold);
+  font-weight:300;line-height:1;margin-bottom:0.5rem;
+}
+.award-body{font-size:0.87rem;color:#6a6860;line-height:1.85}
 
 /* ── BEYOND ── */
-.beyond-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
+.beyond-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
 }
-.beyond-cell {
-  background: var(--bg-card); padding: 2rem 1.75rem;
+.beyond-cell{
+  background:var(--bg2);padding:2rem 1.75rem;
+  transition:background .2s;
 }
-.beyond-label {
-  font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 0.8rem;
+.beyond-cell:hover{background:var(--bg3)}
+.beyond-label{
+  font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.9rem;
 }
-.beyond-cell p { font-size: 0.88rem; color: #a09e96; line-height: 1.8; }
-.beyond-cell a { color: var(--gold2); text-decoration: none; }
-.beyond-cell a:hover { text-decoration: underline; }
+.beyond-cell p{font-size:0.87rem;color:#6a6860;line-height:1.85}
+.beyond-cell a{color:var(--gold);text-decoration:none}
+.beyond-cell a:hover{text-decoration:underline}
 
 /* ── CONTACT ── */
-.contact-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border);
+.contact-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
 }
-.contact-cell {
-  background: var(--bg-card); padding: 1.75rem;
-  text-decoration: none; display: block; transition: background .2s;
+.contact-cell{
+  background:var(--bg2);padding:1.75rem;
+  text-decoration:none;display:block;
+  transition:background .2s;
 }
-.contact-cell:hover { background: var(--bg-subtle); }
-.contact-cell-label {
-  font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 0.5rem;
+.contact-cell:hover{background:var(--bg3)}
+.contact-label{
+  font-size:0.63rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:0.5rem;
 }
-.contact-cell-val { font-size: 0.9rem; color: var(--text); }
+.contact-val{font-size:0.9rem;color:var(--text)}
 
 /* ── FOOTER ── */
-footer {
-  padding: 2.5rem 7vw; text-align: center;
-  font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em;
-  border-top: 1px solid var(--border);
+footer{
+  padding:2.5rem 6vw;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid var(--border);
+  font-size:0.72rem;color:var(--muted);letter-spacing:0.06em;
 }
-footer a { color: var(--gold); text-decoration: none; }
+footer a{color:var(--gold);text-decoration:none}
+.footer-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;color:var(--gold);font-style:italic;
+}
 
 /* ── RESPONSIVE ── */
-@media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-right { height: 55vw; min-height: 260px; }
-  .hero-right img { object-position: center 15%; }
-  .hero-left { padding: 60px 6vw 60px; border-right: none; border-bottom: 1px solid var(--border); }
-  .hero-stats { grid-template-columns: repeat(2, auto); }
-  .exp-item { grid-template-columns: 1fr; gap: 0.3rem; }
-  .lang-awards-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .nav-links { display: none; }
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-right{height:60vw;min-height:280px}
+  .hero-left{padding:60px 6vw;border-right:none;border-bottom:1px solid var(--border)}
+  .stats-row{grid-template-columns:repeat(2,auto)}
+  .two-panel{grid-template-columns:1fr;gap:3rem}
+  .exp-item{grid-template-columns:1fr;gap:0.4rem}
+  .nav-links{display:none}
+  footer{flex-direction:column;gap:1rem;text-align:center}
 }
 </style>
 </head>
@@ -308,28 +391,29 @@ footer a { color: var(--gold); text-decoration: none; }
   <div class="nav-links">
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
-    <a href="#certifications">Certs</a>
+    <a href="#certifications">Certifications</a>
     <a href="#education">Education</a>
     <a href="#beyond">Beyond Work</a>
     <a href="#contact">Contact</a>
   </div>
+  <a href="mailto:me@adamakka.com" class="nav-cta">Get in Touch</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Senior Manager · Program Management · GE Aerospace</p>
+    <p class="eyebrow">Senior Manager · Program Management · GE Aerospace</p>
     <h1 class="hero-name">Adam<br><em>Akka</em></h1>
     <p class="hero-subtitle">Technology Leader · AI Enthusiast · Lifelong Learner</p>
     <p class="hero-bio">20+ years bridging deep technical expertise with strategic program leadership. Directing the PMO within Shared Technology Services at GE Aerospace — driving digital transformation across network infrastructure, digital workplace, and AI. Fluent in three languages, passionate about people, ideas, and impact.</p>
-    <div class="hero-stats">
+    <div class="stats-row">
       <div class="stat"><span class="stat-n">20+</span><span class="stat-l">Years Exp.</span></div>
       <div class="stat"><span class="stat-n">10+</span><span class="stat-l">GE Awards</span></div>
-      <div class="stat"><span class="stat-n">4</span><span class="stat-l">Languages</span></div>
       <div class="stat"><span class="stat-n">4.0</span><span class="stat-l">Grad GPA</span></div>
+      <div class="stat"><span class="stat-n">4</span><span class="stat-l">Languages</span></div>
     </div>
-    <div class="hero-ctas">
-      <a href="https://linkedin.adamakka.com/" class="btn btn-fill" target="_blank">LinkedIn</a>
+    <div class="ctas">
+      <a href="https://linkedin.adamakka.com/" class="btn btn-fill" target="_blank">LinkedIn Profile</a>
       <a href="mailto:me@adamakka.com" class="btn btn-ghost">Get in Touch</a>
       <a href="https://sponsorkids212.org" class="btn btn-ghost" target="_blank">Sponsor Kids 212</a>
     </div>
@@ -340,199 +424,206 @@ footer a { color: var(--gold); text-decoration: none; }
 </div>
 
 <!-- EXPERIENCE -->
-<section class="section" id="experience">
-  <div class="section-inner">
-    <p class="s-eyebrow">Career</p>
-    <h2 class="s-title">Professional <em>Experience</em></h2>
+<section class="sec" id="experience">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-eyebrow">Career</p>
+      <h2 class="sec-title">Professional <em>Experience</em></h2>
+    </div>
+    <div class="exp-list">
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Feb 2026 – Present</div>
-        <div class="exp-co">GE Aerospace<br>Shared Technology Services<br>Digital Technology (DT)</div>
-      </div>
-      <div>
-        <div class="exp-role">Senior Manager – Program Management</div>
-        <div class="exp-body">
-          <p>Leading the Program Management organization within Shared Technology Services (STS), part of GE Aerospace's Digital Technology division. Directly overseeing a team of Technical Program Managers (TPMs) responsible for execution and delivery of critical enterprise technology portfolios.</p>
-          <ul style="margin-top:.8rem">
-            <li><strong style="color:var(--text)">Network Infrastructure &amp; Services</strong> — ensuring robust, scalable, and secure global connectivity.</li>
-            <li><strong style="color:var(--text)">Digital Workplace Technologies</strong> — optimizing employee experience through modern collaboration tools and hardware.</li>
-            <li><strong style="color:var(--text)">Data and AI</strong> — overseeing integration of emerging data architectures and AI-driven digital transformation initiatives.</li>
-            <li>Defining PMO standards, improving project delivery velocity, and ensuring alignment with GE Aerospace's overarching digital strategy.</li>
-          </ul>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-period">Feb 2026 – Present</span>
+          <div class="exp-co"><strong>GE Aerospace</strong><br>Shared Technology Services<br>Digital Technology (DT)</div>
+        </div>
+        <div>
+          <div class="exp-role">Senior Manager – Program Management</div>
+          <div class="exp-body">
+            <p>Leading the Program Management organization within Shared Technology Services (STS), part of GE Aerospace's Digital Technology division. Directly overseeing a team of Technical Program Managers (TPMs) responsible for execution and delivery of critical enterprise technology portfolios.</p>
+            <ul style="margin-top:.7rem">
+              <li><strong>Network Infrastructure &amp; Services</strong> — ensuring robust, scalable, and secure global connectivity.</li>
+              <li><strong>Digital Workplace Technologies</strong> — optimizing employee experience through modern collaboration tools and hardware.</li>
+              <li><strong>Data and AI</strong> — overseeing integration of emerging data architectures and AI-driven digital transformation initiatives.</li>
+              <li>Defining PMO standards, improving project delivery velocity, and ensuring alignment with GE Aerospace's overarching digital strategy.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Jun 2023 – Jan 2026</div>
-        <div class="exp-co">GE Aerospace<br>Cincinnati, OH</div>
-      </div>
-      <div>
-        <div class="exp-role">Senior Staff Technical Program Manager, Infrastructure &amp; Network Services</div>
-        <div class="exp-body">
-          <p>Led global programs to design, deploy, and operationalize next-generation network infrastructure supporting a $200B+ corporate spin-off.</p>
-          <ul style="margin-top:.8rem">
-            <li>Directed programs covering data centers, POPs, SD-WAN, DDI/DNS, load balancers, firewalls, and secure internet access.</li>
-            <li>Established 10+ SOPs and 20+ service request workflows; managed 20+ contractor engineers and PMs.</li>
-            <li>Supported migration of 170+ global business sites; delivered regular executive-level program reviews.</li>
-            <li>FLIGHT DECK lean practitioner and Action Planning team lead.</li>
-          </ul>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-period">Jun 2023 – Jan 2026</span>
+          <div class="exp-co"><strong>GE Aerospace</strong><br>Cincinnati, OH</div>
+        </div>
+        <div>
+          <div class="exp-role">Senior Staff Technical Program Manager, Infrastructure &amp; Network Services</div>
+          <div class="exp-body">
+            <p>Led global programs to design, deploy, and operationalize next-generation network infrastructure supporting a $200B+ corporate spin-off.</p>
+            <ul style="margin-top:.7rem">
+              <li>Directed programs covering data centers, POPs, SD-WAN hubs, DDI/DNS, load balancers, firewalls, and secure internet access services.</li>
+              <li>Established 10+ SOPs and 20+ service request workflows; managed 20+ contractor engineers and PMs.</li>
+              <li>Supported migration of 170+ global business sites; delivered regular executive-level program reviews.</li>
+              <li>FLIGHT DECK lean practitioner and Action Planning team lead.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Nov 2021 – Jun 2023</div>
-        <div class="exp-co">GE Corporate / GE Healthcare Separation<br>Cincinnati, OH</div>
-      </div>
-      <div>
-        <div class="exp-role">Senior Staff Network Engineer &amp; Technical Program Manager</div>
-        <div class="exp-body">
-          <p>Led major network separation supporting the GE HealthCare spin-off across 150 shared sites.</p>
-          <ul style="margin-top:.8rem">
-            <li>Directed global IP remediation across ~350 sites / ~3,000 VLANs; cut cycle time 40%+ via lean improvements.</li>
-            <li>Led four teams (~15 members) across planning, design, execution, and cutover on multiple continents.</li>
-            <li>Served as Lean Ambassador for CoreTech DT Infrastructure.</li>
-          </ul>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-period">Nov 2021 – Jun 2023</span>
+          <div class="exp-co"><strong>GE Corporate</strong><br>GE Healthcare Separation<br>Cincinnati, OH</div>
+        </div>
+        <div>
+          <div class="exp-role">Senior Staff Network Engineer &amp; Technical Program Manager</div>
+          <div class="exp-body">
+            <p>Led major network separation supporting the GE HealthCare spin-off across 150 shared sites.</p>
+            <ul style="margin-top:.7rem">
+              <li>Directed global IP remediation across ~350 sites / ~3,000 VLANs; cut cycle time 40%+ via lean improvements.</li>
+              <li>Led four teams (~15 members) across planning, design, execution, and cutover on multiple continents.</li>
+              <li>Served as Lean Ambassador for CoreTech DT Infrastructure.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Jan 2017 – Nov 2021</div>
-        <div class="exp-co">GE Digital / GE Corporate<br>Cincinnati, OH</div>
-      </div>
-      <div>
-        <div class="exp-role">Staff Network Engineer &amp; Lean Practitioner</div>
-        <div class="exp-body">
-          <ul>
-            <li>Completed 100+ network infrastructure projects on schedule with quality adherence.</li>
-            <li>Managed 1,200+ third-party VPN connections; migrated global POPs from MPLS, driving $10M+/year in savings.</li>
-            <li>Led modernization across six global data centers; supported 1,000-site SD-WAN migration.</li>
-            <li>Authored 30+ SOPs; led continuous improvement as Lean ambassador.</li>
-          </ul>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-period">Jan 2017 – Nov 2021</span>
+          <div class="exp-co"><strong>GE Digital / GE Corporate</strong><br>Cincinnati, OH</div>
+        </div>
+        <div>
+          <div class="exp-role">Staff Network Engineer &amp; Lean Practitioner</div>
+          <div class="exp-body">
+            <ul>
+              <li>Completed 100+ network infrastructure projects on schedule with quality adherence.</li>
+              <li>Managed 1,200+ third-party VPN connections; migrated global POPs from MPLS, driving $10M+/year in recurring savings.</li>
+              <li>Led modernization across six global data centers; supported 1,000-site SD-WAN migration.</li>
+              <li>Authored 30+ SOPs; led continuous improvement as Lean ambassador.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Dec 2014 – Jan 2017</div>
-        <div class="exp-co">GE via CBTS<br>Springdale, OH</div>
-      </div>
-      <div>
-        <div class="exp-role">Network Engineer III &amp; Team Lead</div>
-        <div class="exp-body">
-          <ul>
-            <li>Designed and deployed IPSec/DMVPN interconnects between GE data centers and external partners.</li>
-            <li>Served as technical escalation point; developed training and documentation that accelerated team ramp-up.</li>
-          </ul>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-period">Dec 2014 – Jan 2017</span>
+          <div class="exp-co"><strong>GE</strong> via CBTS<br>Springdale, OH</div>
+        </div>
+        <div>
+          <div class="exp-role">Network Engineer III &amp; Team Lead</div>
+          <div class="exp-body">
+            <ul>
+              <li>Designed and deployed IPSec/DMVPN interconnects between GE data centers and external partners.</li>
+              <li>Served as technical escalation point; developed training and documentation that accelerated team ramp-up.</li>
+              <li>Onboarded and trained new hires — Network Engineers and Project Managers.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Apr 2010 – Dec 2014</div>
-        <div class="exp-co">Clopay Corporation<br>Mason, OH</div>
-      </div>
-      <div>
-        <div class="exp-role">IT &amp; Network Systems Engineer</div>
-        <div class="exp-body">
-          <ul>
-            <li>Architected and supported enterprise network infrastructure for 3,000+ employees across 50 facilities.</li>
-            <li>Maintained 99.9%+ uptime; reduced EDI penalties 80%+ through compliance and auditing solutions.</li>
-          </ul>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-period">Apr 2010 – Dec 2014</span>
+          <div class="exp-co"><strong>Clopay Corporation</strong><br>Mason, OH</div>
+        </div>
+        <div>
+          <div class="exp-role">IT &amp; Network Systems Engineer</div>
+          <div class="exp-body">
+            <ul>
+              <li>Architected and supported enterprise network infrastructure for 3,000+ employees across 50 facilities.</li>
+              <li>Maintained 99.9%+ uptime; reduced EDI penalties 80%+ through compliance and auditing solutions.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Jul 2005 – Nov 2008</div>
-        <div class="exp-co">Dell Technologies</div>
-      </div>
-      <div>
-        <div class="exp-role">Technical Support Engineer</div>
-        <div class="exp-body">
-          <ul>
-            <li>95% customer satisfaction, 98% first-call resolution across enterprise systems.</li>
-            <li>Provided multilingual support, enabling broader customer coverage.</li>
-          </ul>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-period">Jul 2005 – Nov 2008</span>
+          <div class="exp-co"><strong>Dell Technologies</strong></div>
+        </div>
+        <div>
+          <div class="exp-role">Technical Support Engineer</div>
+          <div class="exp-body">
+            <ul>
+              <li>95% customer satisfaction, 98% first-call resolution across enterprise systems.</li>
+              <li>Provided multilingual support, enabling broader customer coverage.</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Founded · Ongoing</div>
-        <div class="exp-co">Sponsor Kids 212 Inc.<br>Nonprofit</div>
-      </div>
-      <div>
-        <div class="exp-role">Founder &amp; President</div>
-        <div class="exp-body">
-          <p>Founded and leads Sponsor Kids 212 Inc., a nonprofit dedicated to supporting children and community. Actively volunteers within the local community and at work as often as possible.</p>
-          <p style="margin-top:.5rem"><a href="https://sponsorkids212.org" target="_blank">sponsorkids212.org →</a></p>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <span class="exp-period">Founded · Ongoing</span>
+          <div class="exp-co"><strong>Sponsor Kids 212 Inc.</strong><br>Nonprofit Organization</div>
+        </div>
+        <div>
+          <div class="exp-role">Founder &amp; President</div>
+          <div class="exp-body">
+            <p>Founded and leads Sponsor Kids 212 Inc., a nonprofit dedicated to supporting children and community. Actively volunteers within the local community and at work as often as possible.</p>
+            <p style="margin-top:.5rem"><a href="https://sponsorkids212.org" target="_blank">sponsorkids212.org →</a></p>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section class="section" id="skills">
-  <div class="section-inner">
-    <p class="s-eyebrow">Expertise</p>
-    <h2 class="s-title">Core <em>Skills</em></h2>
-    <div class="skills-grid">
+<section class="sec" id="skills">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-eyebrow">Expertise</p>
+      <h2 class="sec-title">Core <em>Skills</em></h2>
+    </div>
+    <div class="skills-wrap">
       <div class="skill-cell">
-        <div class="skill-cell-title">Program &amp; Project Management</div>
-        <div class="skill-tags">
+        <div class="skill-cell-label">Program &amp; Project Management</div>
+        <div class="tags">
           <span class="tag">Program Strategy</span><span class="tag">Portfolio Management</span>
           <span class="tag">PMO Governance</span><span class="tag">Risk Management</span>
           <span class="tag">KPIs &amp; Metrics</span><span class="tag">Executive Briefings</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-cell-title">Leadership &amp; People</div>
-        <div class="skill-tags">
+        <div class="skill-cell-label">Leadership &amp; People</div>
+        <div class="tags">
           <span class="tag">Cross-functional Collaboration</span><span class="tag">Team Building</span>
           <span class="tag">Mentoring &amp; Coaching</span><span class="tag">Stakeholder Influence</span>
           <span class="tag">Vendor Management</span><span class="tag">Talent Development</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-cell-title">Problem Solving</div>
-        <div class="skill-tags">
+        <div class="skill-cell-label">Problem Solving</div>
+        <div class="tags">
           <span class="tag">Structured Problem Solving</span><span class="tag">Process Design</span>
           <span class="tag">Root Cause Analysis</span><span class="tag">Lean / FLIGHT DECK</span>
           <span class="tag">Continuous Improvement</span><span class="tag">SOP Development</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-cell-title">Infrastructure &amp; Technology</div>
-        <div class="skill-tags">
+        <div class="skill-cell-label">Infrastructure &amp; Technology</div>
+        <div class="tags">
           <span class="tag">Network Infrastructure</span><span class="tag">Cloud (AWS · Azure)</span>
           <span class="tag">Cybersecurity</span><span class="tag">SD-WAN</span>
           <span class="tag">Data Centers</span><span class="tag">Identity Systems</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-cell-title">Data &amp; AI</div>
-        <div class="skill-tags">
+        <div class="skill-cell-label">Data &amp; AI</div>
+        <div class="tags">
           <span class="tag">AI-driven Initiatives</span><span class="tag">Data Architecture</span>
           <span class="tag">Digital Transformation</span><span class="tag">Automation</span>
           <span class="tag">Data-driven Decision Making</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-cell-title">Architecture &amp; Delivery</div>
-        <div class="skill-tags">
+        <div class="skill-cell-label">Architecture &amp; Delivery</div>
+        <div class="tags">
           <span class="tag">Enterprise Architecture</span><span class="tag">Operational Readiness</span>
           <span class="tag">Migration Programs</span><span class="tag">Global Delivery</span>
           <span class="tag">Architecture Collaboration</span>
@@ -543,14 +634,16 @@ footer a { color: var(--gold); text-decoration: none; }
 </section>
 
 <!-- CERTIFICATIONS -->
-<section class="section" id="certifications">
-  <div class="section-inner">
-    <p class="s-eyebrow">Credentials</p>
-    <h2 class="s-title">Certifications &amp; <em>Training</em></h2>
-    <div class="certs-list">
+<section class="sec" id="certifications">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-eyebrow">Credentials</p>
+      <h2 class="sec-title">Certifications &amp; <em>Training</em></h2>
+    </div>
+    <div class="certs-wrap">
       <div class="cert-row"><span class="cert-name">GE Aerospace Leadership Practices Program</span><span class="cert-right"><span class="cert-org">GE Aerospace</span><span class="cert-date">May 2026</span></span></div>
-      <div class="cert-row"><span class="cert-name">CISSP Training</span><span class="cert-right"><span class="cert-org">ISC²</span><span class="cert-date">Oct 2025</span></span></div>
       <div class="cert-row"><span class="cert-name">Successfully Managing People</span><span class="cert-right"><span class="cert-org">American Management Association</span><span class="cert-date">Nov 2025</span></span></div>
+      <div class="cert-row"><span class="cert-name">CISSP Training</span><span class="cert-right"><span class="cert-org">ISC²</span><span class="cert-date">Oct 2025</span></span></div>
       <div class="cert-row"><span class="cert-name">Prompt Engineering for AI</span><span class="cert-right"><span class="cert-org">LinkedIn Learning</span><span class="cert-date">2026</span></span></div>
       <div class="cert-row"><span class="cert-name">Lean Communication</span><span class="cert-right"><span class="cert-org">LinkedIn Learning</span><span class="cert-date">2026</span></span></div>
       <div class="cert-row"><span class="cert-name">Active Listening</span><span class="cert-right"><span class="cert-org">LinkedIn Learning</span><span class="cert-date">2026</span></span></div>
@@ -579,11 +672,13 @@ footer a { color: var(--gold); text-decoration: none; }
 </section>
 
 <!-- EDUCATION -->
-<section class="section" id="education">
-  <div class="section-inner">
-    <p class="s-eyebrow">Academic</p>
-    <h2 class="s-title">Education</h2>
-    <div class="edu-grid">
+<section class="sec" id="education">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-eyebrow">Academic</p>
+      <h2 class="sec-title">Education</h2>
+    </div>
+    <div class="edu-wrap">
       <div class="edu-cell">
         <div class="edu-degree">Master of Engineering Management</div>
         <div class="edu-school">The Ohio State University</div>
@@ -612,12 +707,12 @@ footer a { color: var(--gold); text-decoration: none; }
 </section>
 
 <!-- LANGUAGES & AWARDS -->
-<section class="section">
-  <div class="section-inner">
-    <div class="lang-awards-grid">
+<section class="sec">
+  <div class="sec-inner">
+    <div class="two-panel">
       <div>
-        <p class="s-eyebrow">Communication</p>
-        <h2 class="s-title" style="margin-bottom:1.5rem">Languages</h2>
+        <p class="sec-eyebrow">Communication</p>
+        <h2 class="sec-title" style="margin-bottom:1.75rem">Languages</h2>
         <div class="lang-list">
           <div class="lang-row"><span class="lang-name">English</span><span class="lang-level">Fluent</span></div>
           <div class="lang-row"><span class="lang-name">French</span><span class="lang-level">Fluent</span></div>
@@ -627,77 +722,83 @@ footer a { color: var(--gold); text-decoration: none; }
         </div>
       </div>
       <div>
-        <p class="s-eyebrow">Recognition</p>
-        <h2 class="s-title" style="margin-bottom:1.5rem">Awards</h2>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold2);margin-bottom:1rem;">10+ GE IMPACT Awards</p>
-        <p style="font-size:0.88rem;color:#a09e96;line-height:1.8;">Recognized across 2015–2025 for exceptional contributions in infrastructure delivery, migration programs, compliance, operational support, and performance improvements across GE's global technology organization.</p>
+        <p class="sec-eyebrow">Recognition</p>
+        <h2 class="sec-title" style="margin-bottom:1.75rem">Awards</h2>
+        <div class="award-n">10+</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--muted2);margin-bottom:1rem;font-weight:300">GE IMPACT Awards</p>
+        <p class="award-body">Recognized across 2015–2025 for exceptional contributions in infrastructure delivery, migration programs, compliance, operational support, and performance improvements across GE's global technology organization.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- BEYOND WORK -->
-<section class="section" id="beyond">
-  <div class="section-inner">
-    <p class="s-eyebrow">Personal</p>
-    <h2 class="s-title">Beyond <em>Work</em></h2>
-    <div class="beyond-grid">
+<section class="sec" id="beyond">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-eyebrow">Personal</p>
+      <h2 class="sec-title">Beyond <em>Work</em></h2>
+    </div>
+    <div class="beyond-wrap">
       <div class="beyond-cell">
         <div class="beyond-label">Community &amp; Giving Back</div>
-        <p>Founder &amp; President of <a href="https://sponsorkids212.org" target="_blank">Sponsor Kids 212 Inc.</a>, a nonprofit supporting children. Actively volunteers within the local community and at work — believing service and giving back are core to a meaningful life.</p>
+        <p>Founder &amp; President of <a href="https://sponsorkids212.org" target="_blank">Sponsor Kids 212 Inc.</a>, a nonprofit supporting children. Actively volunteers within the local community and at work — believing that service and giving back are core to a meaningful life.</p>
       </div>
       <div class="beyond-cell">
         <div class="beyond-label">Family &amp; Fun Projects</div>
-        <p>Proud dad of Zak (10). Together they built <a href="https://zaksgames.com" target="_blank">zaksgames.com</a> — a website created for fun and educational purposes. A hands-on way to share the love of technology with the next generation.</p>
+        <p>Proud dad of Zak (10). Together they built <a href="https://zaksgames.com" target="_blank">zaksgames.com</a> — a website created for fun and educational purposes. A hands-on way to share a love of technology and learning with the next generation.</p>
       </div>
       <div class="beyond-cell">
         <div class="beyond-label">Languages &amp; Travel</div>
-        <p>Fluent in three languages, advanced in Spanish, and currently learning Italian. Passionate about discovering new ideas through travel, books, documentaries, movies, and shows. Travel is one of the richest forms of education.</p>
+        <p>Fluent in three languages, advanced in Spanish, and currently learning Italian. Passionate about discovering new ideas through travel, books, documentaries, movies, and shows — travel is one of the richest forms of education.</p>
       </div>
       <div class="beyond-cell">
         <div class="beyond-label">Podcasts</div>
-        <p>Listens while working out, walking, or doing projects at home. Favorites: <em>The Indicator, How I Built This, Radiolab, Planet Money, Hidden Brain, HBR IdeaCast, Click Here, Throughline,</em> and <em>This American Life.</em></p>
+        <p>Listens while working out, walking, or doing projects around the house. Favorites: <em>The Indicator, How I Built This, Radiolab, Planet Money, Hidden Brain, HBR IdeaCast, Click Here, Throughline,</em> and <em>This American Life.</em></p>
       </div>
       <div class="beyond-cell">
         <div class="beyond-label">DIY &amp; Home Renovation</div>
-        <p>Enjoys all kinds of renovation and DIY projects — a natural problem-solver both at work and at home. From small fixes to larger builds, always hands-on.</p>
+        <p>Enjoys all kinds of renovation and DIY projects around the house — a natural problem-solver at work and at home. From small fixes to larger builds, always hands-on.</p>
       </div>
       <div class="beyond-cell">
         <div class="beyond-label">AI Enthusiast</div>
-        <p>Deeply curious about artificial intelligence and its real-world applications — from enterprise digital transformation to everyday tools. Continuously learning and experimenting with new AI capabilities.</p>
+        <p>Deeply curious about artificial intelligence and its real-world applications — from enterprise digital transformation to everyday tools. Continuously learning and experimenting with emerging AI capabilities.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
-  <div class="section-inner">
-    <p class="s-eyebrow">Connect</p>
-    <h2 class="s-title">Get in <em>Touch</em></h2>
-    <div class="contact-grid">
+<section class="sec" id="contact">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-eyebrow">Connect</p>
+      <h2 class="sec-title">Get in <em>Touch</em></h2>
+    </div>
+    <div class="contact-wrap">
       <a href="mailto:me@adamakka.com" class="contact-cell">
-        <div class="contact-cell-label">Email</div>
-        <div class="contact-cell-val">me@adamakka.com</div>
+        <div class="contact-label">Email</div>
+        <div class="contact-val">me@adamakka.com</div>
       </a>
       <a href="https://linkedin.adamakka.com/" class="contact-cell" target="_blank">
-        <div class="contact-cell-label">LinkedIn</div>
-        <div class="contact-cell-val">linkedin.adamakka.com</div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-val">linkedin.adamakka.com</div>
       </a>
       <a href="https://sponsorkids212.org" class="contact-cell" target="_blank">
-        <div class="contact-cell-label">Nonprofit</div>
-        <div class="contact-cell-val">sponsorkids212.org</div>
+        <div class="contact-label">Nonprofit</div>
+        <div class="contact-val">sponsorkids212.org</div>
       </a>
       <a href="https://zaksgames.com" class="contact-cell" target="_blank">
-        <div class="contact-cell-label">Zak's Games</div>
-        <div class="contact-cell-val">zaksgames.com</div>
+        <div class="contact-label">Zak's Games</div>
+        <div class="contact-val">zaksgames.com</div>
       </a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Adam Akka &nbsp;·&nbsp; <a href="mailto:me@adamakka.com">me@adamakka.com</a> &nbsp;·&nbsp; West Chester, Ohio</p>
+  <span class="footer-logo">Adam Akka</span>
+  <span>© 2026 &nbsp;·&nbsp; West Chester, Ohio &nbsp;·&nbsp; <a href="mailto:me@adamakka.com">me@adamakka.com</a></span>
 </footer>
 
 <script>
@@ -708,11 +809,11 @@ const io = new IntersectionObserver(entries => {
       e.target.style.transform = 'translateY(0)';
     }
   });
-}, { threshold: 0.06 });
-document.querySelectorAll('.exp-item,.skill-cell,.cert-row,.edu-cell,.beyond-cell,.lang-row,.contact-cell').forEach(el => {
+}, {threshold: 0.05});
+document.querySelectorAll('.exp-item,.skill-cell,.cert-row,.edu-cell,.beyond-cell,.lang-row,.contact-cell,.stat').forEach(el => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(14px)';
-  el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   io.observe(el);
 });
 </script>
