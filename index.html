@@ -316,6 +316,37 @@ nav{
 }
 .award-body{font-size:0.87rem;color:#6a6860;line-height:1.85}
 
+/* ── PROJECTS ── */
+.projects-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+}
+.project-cell{
+  background:var(--bg2);padding:2rem 1.75rem;
+  transition:background .2s;
+  display:flex;flex-direction:column;
+}
+.project-cell:hover{background:var(--bg3)}
+.project-tag{
+  font-size:0.63rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.9rem;
+}
+.project-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:400;
+  color:var(--white);margin-bottom:0.6rem;
+}
+.project-cell p{font-size:0.87rem;color:#6a6860;line-height:1.8;margin-bottom:1.1rem;flex-grow:1}
+.project-link{
+  color:var(--gold);text-decoration:none;
+  font-size:0.78rem;letter-spacing:0.05em;
+  border-top:1px solid var(--border);padding-top:0.9rem;
+}
+.project-link:hover{color:var(--gold2);text-decoration:underline}
+
 /* ── BEYOND ── */
 .beyond-wrap{
   display:grid;
@@ -393,6 +424,7 @@ footer a{color:var(--gold);text-decoration:none}
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
     <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
     <a href="#beyond">Beyond Work</a>
     <a href="#contact">Contact</a>
   </div>
@@ -732,6 +764,36 @@ footer a{color:var(--gold);text-decoration:none}
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section class="sec" id="projects">
+  <div class="sec-inner">
+    <div class="sec-head">
+      <p class="sec-eyebrow">Side Ventures</p>
+      <h2 class="sec-title">Projects &amp; <em>Solutions</em></h2>
+    </div>
+    <div class="projects-wrap">
+      <div class="project-cell">
+        <div class="project-tag">Personal Finance</div>
+        <div class="project-title">PlanWize</div>
+        <p>A 401(k) retirement contribution planning tool built to help individuals plan and optimize their contributions with clarity and confidence.</p>
+        <a href="https://myplanwize.com" class="project-link" target="_blank">myplanwize.com →</a>
+      </div>
+      <div class="project-cell">
+        <div class="project-tag">Education</div>
+        <div class="project-title">TimeDive</div>
+        <p>A storytelling-driven approach to teaching history — connecting events through narrative to make the past easier to understand and remember.</p>
+        <a href="https://mytimedive.com" class="project-link" target="_blank">mytimedive.com →</a>
+      </div>
+      <div class="project-cell">
+        <div class="project-tag">Community</div>
+        <div class="project-title">Lakota Springs</div>
+        <p>The official community portal for the Lakota Springs HOA, giving residents a central place for updates, resources, and information.</p>
+        <a href="https://lakotasprings.us" class="project-link" target="_blank">lakotasprings.us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BEYOND WORK -->
 <section class="sec" id="beyond">
   <div class="sec-inner">
@@ -810,7 +872,7 @@ const io = new IntersectionObserver(entries => {
     }
   });
 }, {threshold: 0.05});
-document.querySelectorAll('.exp-item,.skill-cell,.cert-row,.edu-cell,.beyond-cell,.lang-row,.contact-cell,.stat').forEach(el => {
+document.querySelectorAll('.exp-item,.skill-cell,.cert-row,.edu-cell,.beyond-cell,.lang-row,.contact-cell,.stat,.project-cell').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(16px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
