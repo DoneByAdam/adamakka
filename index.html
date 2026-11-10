@@ -6,7 +6,7 @@
 <title>Adam Akka — Senior Manager, Program Management</title>
 <meta name="description" content="Adam Akka — Senior Manager, Program Management at GE Aerospace. Technology leader, AI enthusiast, and founder of Sponsor Kids 212.">
 <meta name="theme-color" content="#060912">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f1730'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' fill='%23a3e635' font-weight='700'%3EAA%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f1730'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' fill='%2326d96a' font-weight='700'%3EAA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,9 +21,9 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
   --card2:#16214a;
   --blue:#2b3fd9;
   --blue2:#4d7cff;
-  --green:#a3e635;       /* mint-emerald that pairs with navy */
-  --green2:#d9f99d;
-  --green-soft:rgba(163,230,53,.12);
+  --green:#26d96a;       /* mint-emerald that pairs with navy */
+  --green2:#86efac;
+  --green-soft:rgba(38,217,106,.12);
   --border:rgba(140,160,255,.14);
   --border2:rgba(140,160,255,.28);
   --text:#e8eefc;
@@ -44,10 +44,10 @@ body::before{ /* ambient glow */
   content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
   background:
     radial-gradient(900px 500px at 85% -5%,rgba(77,124,255,.20),transparent 60%),
-    radial-gradient(700px 500px at -5% 35%,rgba(163,230,53,.07),transparent 60%),
+    radial-gradient(700px 500px at -5% 35%,rgba(38,217,106,.07),transparent 60%),
     radial-gradient(800px 600px at 50% 110%,rgba(43,63,217,.25),transparent 60%);
 }
-::selection{background:var(--green);color:#0a1200}
+::selection{background:var(--green);color:#04140a}
 ::-webkit-scrollbar{width:8px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:#2a3566;border-radius:8px}
@@ -70,8 +70,8 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(6,9,18,.88)}
 .nav-links a{font-size:.82rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.45rem .8rem;border-radius:999px;transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--white)}
 .nav-links a.active{color:var(--green);background:var(--green-soft)}
-.nav-cta{font-size:.82rem;font-weight:600;color:#0a1200;background:var(--green);padding:.5rem 1.15rem;border-radius:999px;text-decoration:none;transition:transform .2s var(--ease),box-shadow .2s,background .2s}
-.nav-cta:hover{background:var(--green2);transform:translateY(-1px);box-shadow:0 8px 24px -8px rgba(163,230,53,.6)}
+.nav-cta{font-size:.82rem;font-weight:600;color:#04140a;background:var(--green);padding:.5rem 1.15rem;border-radius:999px;text-decoration:none;transition:transform .2s var(--ease),box-shadow .2s,background .2s}
+.nav-cta:hover{background:var(--green2);transform:translateY(-1px);box-shadow:0 8px 24px -8px rgba(38,217,106,.6)}
 
 /* ── HERO ── */
 .hero{position:relative;padding:150px 5vw 80px;max-width:1180px;margin:0 auto}
@@ -79,14 +79,14 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(6,9,18,.88)}
 .avatar{position:relative;width:76px;height:76px;flex:none}
 .avatar::before{content:'';position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,var(--green),var(--blue2),var(--green));animation:spin 8s linear infinite}
 .avatar img{position:relative;display:block;width:calc(100% - 6px);height:calc(100% - 6px);margin:3px;border-radius:50%;object-fit:cover;border:3px solid var(--bg)}
-.avatar::after{content:'';position:absolute;right:2px;bottom:4px;width:15px;height:15px;border-radius:50%;background:var(--green);border:3px solid var(--bg);box-shadow:0 0 0 0 rgba(163,230,53,.6);animation:pulse 2s infinite}
+.avatar::after{content:'';position:absolute;right:2px;bottom:4px;width:15px;height:15px;border-radius:50%;background:var(--green);border:3px solid var(--bg);box-shadow:0 0 0 0 rgba(38,217,106,.6);animation:pulse 2s infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(163,230,53,.55)}70%{box-shadow:0 0 0 10px rgba(163,230,53,0)}100%{box-shadow:0 0 0 0 rgba(163,230,53,0)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(38,217,106,.55)}70%{box-shadow:0 0 0 10px rgba(38,217,106,0)}100%{box-shadow:0 0 0 0 rgba(38,217,106,0)}}
 .profile-meta b{display:block;color:var(--white);font-weight:600;font-size:1rem;line-height:1.3}
 .profile-meta span{font-size:.82rem;color:var(--muted)}
 
 .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:500;color:var(--green);
-  background:var(--green-soft);border:1px solid rgba(163,230,53,.25);padding:.35rem .85rem;border-radius:999px;margin-bottom:1.5rem}
+  background:var(--green-soft);border:1px solid rgba(38,217,106,.25);padding:.35rem .85rem;border-radius:999px;margin-bottom:1.5rem}
 .eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 
 .hero-name{font-size:clamp(3rem,8.5vw,7rem);font-weight:800;line-height:.98;letter-spacing:-.045em;color:var(--white);margin-bottom:1.2rem}
@@ -97,8 +97,8 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(6,9,18,.88)}
 
 .ctas{display:flex;gap:.75rem;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.6rem;font-size:.92rem;font-weight:600;border-radius:999px;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s,background .25s,border-color .25s,color .25s}
-.btn-fill{background:var(--green);color:#0a1200}
-.btn-fill:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(163,230,53,.65)}
+.btn-fill{background:var(--green);color:#04140a}
+.btn-fill:hover{background:var(--green2);transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(38,217,106,.65)}
 .btn-ghost{border:1px solid var(--border2);color:var(--text);background:rgba(255,255,255,.02)}
 .btn-ghost:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
 
@@ -173,14 +173,14 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(6,9,18,.88)}
   transition:border-color .3s,transform .35s var(--ease),box-shadow .35s}
 .skill-cell::after,.edu-cell::after,.project-cell::after,.beyond-cell::after,.contact-cell::after{ /* cursor spotlight */
   content:'';position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;
-  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(163,230,53,.12),transparent 70%)}
-.skill-cell:hover,.edu-cell:hover,.project-cell:hover,.beyond-cell:hover,.contact-cell:hover{border-color:rgba(163,230,53,.45);transform:translateY(-5px);box-shadow:0 24px 50px -28px rgba(163,230,53,.35)}
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(38,217,106,.12),transparent 70%)}
+.skill-cell:hover,.edu-cell:hover,.project-cell:hover,.beyond-cell:hover,.contact-cell:hover{border-color:rgba(38,217,106,.45);transform:translateY(-5px);box-shadow:0 24px 50px -28px rgba(38,217,106,.35)}
 .skill-cell:hover::after,.edu-cell:hover::after,.project-cell:hover::after,.beyond-cell:hover::after,.contact-cell:hover::after{opacity:1}
 
 .skill-cell-label,.beyond-label,.project-tag{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:1rem}
 .tags{display:flex;flex-wrap:wrap;gap:.45rem}
 .tag{background:rgba(77,124,255,.1);border:1px solid rgba(77,124,255,.25);color:var(--muted2);font-size:.78rem;font-weight:500;padding:.28rem .75rem;border-radius:999px;transition:all .2s}
-.tag:hover{background:var(--green-soft);border-color:rgba(163,230,53,.5);color:var(--green)}
+.tag:hover{background:var(--green-soft);border-color:rgba(38,217,106,.5);color:var(--green)}
 
 /* certs */
 .certs-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.5rem 1.5rem}
@@ -305,7 +305,7 @@ footer a{color:var(--green);text-decoration:none}
         <span class="pf-badge">LIVE</span>
       </div>
       <svg class="chart" id="chart" viewBox="0 0 400 150" preserveAspectRatio="none" aria-hidden="true">
-        <defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a3e635" stop-opacity=".35"/><stop offset="1" stop-color="#a3e635" stop-opacity="0"/></linearGradient></defs>
+        <defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26d96a" stop-opacity=".35"/><stop offset="1" stop-color="#26d96a" stop-opacity="0"/></linearGradient></defs>
         <path class="area" d="M0,128 L40,122 L80,126 L120,108 L160,112 L200,92 L240,84 L280,66 L320,48 L360,32 L400,14 L400,150 L0,150 Z"/>
         <path class="line" pathLength="1" d="M0,128 L40,122 L80,126 L120,108 L160,112 L200,92 L240,84 L280,66 L320,48 L360,32 L400,14"/>
         <circle class="dot" cx="400" cy="14" r="5"/>
